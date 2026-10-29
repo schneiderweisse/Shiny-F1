@@ -1,0 +1,19 @@
+# Data: recreate with  Rscript scripts/fetch_data.R
+/F1DB/
+/Jolpica/
+/OpenF1/
+/TracingInsights_2026/
+/f1-circuits/
+/TUMFTM_racetrack-database/
+/FIA_documents/
+
+# Web build output: made by scripts/build_web.R
+/site/
+/dashboard/webdata/
+
+# Local tooling
+/.claude/
+.Rhistory
+.RData
+.Rproj.user/
+rsconnect/

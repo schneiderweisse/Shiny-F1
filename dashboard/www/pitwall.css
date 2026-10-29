@@ -1,0 +1,201 @@
+/* F1 Data Pit Wall: 2000s TV-graphics look.
+   Carbon-fibre ground, chrome tab bars, slanted red markers, yellow timing-screen digits. */
+:root {
+  --carbon: #0b0d10;
+  --panel: rgba(17, 20, 25, 0.94);
+  --panel-2: #1a1e24;
+  --line: #2b3038;
+  --text: #dfe3e8;
+  --muted: #8d95a1;
+  --red: #e10600;
+  --yellow: #ffd200;
+  --chrome: linear-gradient(180deg, #fbfcfd 0%, #d8dce2 38%, #9ba2ac 52%, #c6cbd2 72%, #eef0f3 100%);
+  --font-display: "Exo 2", "Arial Black", sans-serif;
+  --font-body: "Barlow Semi Condensed", "Arial Narrow", sans-serif;
+  --font-mono: "Share Tech Mono", Consolas, monospace;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text);
+  background-color: #101216;
+  background-image:
+    radial-gradient(#07080a 15%, transparent 16%),
+    radial-gradient(#07080a 15%, transparent 16%),
+    radial-gradient(rgba(255, 255, 255, 0.035) 15%, transparent 20%),
+    radial-gradient(rgba(255, 255, 255, 0.035) 15%, transparent 20%);
+  background-position: 0 0, 6px 6px, 0 1px, 6px 7px;
+  background-size: 12px 12px;
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-display); font-style: italic; font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em; }
+a { color: var(--yellow); }
+a:hover { color: #fff; }
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background: linear-gradient(180deg, #20242b 0%, #0b0d10 100%) !important;
+  border-bottom: 3px solid var(--red);
+  box-shadow: 0 4px 0 #000, 0 6px 18px rgba(0, 0, 0, 0.6);
+  padding-top: 6px; padding-bottom: 6px;
+}
+.pw-brand { font-family: var(--font-display); font-style: italic; font-weight: 900; font-size: 1.35rem; letter-spacing: 0.03em; color: #fff; display: inline-flex; align-items: center; gap: 10px; }
+.pw-brand-f1 {
+  background: var(--red); color: #fff; padding: 0 12px; transform: skewX(-14deg); display: inline-block;
+  box-shadow: 3px 3px 0 #000;
+}
+.navbar .nav-link {
+  font-family: var(--font-display); font-style: italic; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; font-size: 0.92rem; color: #c3c8cf !important;
+  position: relative; isolation: isolate; padding-left: 14px !important; padding-right: 14px !important;
+}
+.navbar .nav-link::before {
+  content: ""; position: absolute; inset: 6px 2px; transform: skewX(-14deg); z-index: -1;
+  background: transparent; transition: background 0.15s;
+}
+.navbar .nav-link:hover::before { background: rgba(255, 255, 255, 0.08); }
+.navbar .nav-link.active { color: #0b0d10 !important; }
+.navbar .nav-link.active::before { background: var(--chrome); box-shadow: inset 0 -3px 0 var(--red); }
+
+/* ---------- Layout ---------- */
+.bslib-page-navbar > .container-fluid, .tab-content > .tab-pane { padding-top: 18px; }
+.container-fluid { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* ---------- Cards = TV graphic boxes ---------- */
+.card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 0;
+  box-shadow: 0 3px 0 #000, inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+.card-header {
+  position: relative; background: linear-gradient(90deg, #000 0%, #181b21 100%);
+  border-bottom: 2px solid var(--red); border-radius: 0 !important; padding: 8px 14px 8px 30px;
+  font-family: var(--font-display); font-style: italic; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.05em; color: #fff; font-size: 0.95rem;
+}
+.card-header::before {
+  content: ""; position: absolute; left: 10px; top: 24%; bottom: 24%; width: 9px;
+  background: var(--red); transform: skewX(-16deg);
+}
+.card-header .pw-sub { font-family: var(--font-body); font-style: normal; font-weight: 500; text-transform: none; color: var(--muted); letter-spacing: 0; margin-left: 8px; font-size: 0.85rem; }
+.card-body { color: var(--text); }
+
+/* ---------- Control strip (chrome bar) ---------- */
+.pw-controls {
+  display: flex; flex-wrap: wrap; gap: 6px 22px; align-items: flex-end;
+  padding: 10px 16px 2px; margin-bottom: 16px;
+  background: var(--chrome); border-left: 8px solid var(--red);
+  box-shadow: 0 3px 0 #000; color: #111;
+}
+.pw-controls .form-group, .pw-controls .shiny-input-container { margin-bottom: 8px; min-width: 160px; }
+.pw-controls label, .pw-controls .control-label {
+  font-family: var(--font-display); font-style: italic; font-weight: 800; text-transform: uppercase;
+  font-size: 0.74rem; letter-spacing: 0.06em; color: #1b1e23;
+}
+.pw-controls .selectize-input, .pw-controls .form-control, .pw-controls .form-select {
+  background: #fff !important; color: #111 !important; border: 1px solid #6c737d; border-radius: 0; box-shadow: inset 0 1px 2px rgba(0,0,0,.25);
+}
+.pw-controls .selectize-input .item { color: #111 !important; }
+.pw-controls .selectize-control.multi .selectize-input > div.item {
+  background: #111 !important; color: #fff !important; border: 0 !important; border-radius: 0 !important;
+  font-weight: 600; padding: 1px 8px !important; box-shadow: 2px 2px 0 var(--red);
+}
+.pw-controls .selectize-input input { color: #111 !important; }
+.pw-controls .checkbox label, .pw-controls .radio label, .pw-controls .form-check-label { font-family: var(--font-body); font-style: normal; text-transform: none; font-size: 0.92rem; font-weight: 600; letter-spacing: 0; }
+.pw-controls .irs--shiny .irs-bar { background: var(--red); border-color: var(--red); }
+.pw-controls .irs--shiny .irs-from, .pw-controls .irs--shiny .irs-to, .pw-controls .irs--shiny .irs-single {
+  background: #111; color: var(--yellow); font-family: var(--font-mono); font-size: 0.8rem; border-radius: 0;
+}
+.pw-controls .irs--shiny .irs-grid-text, .pw-controls .irs--shiny .irs-min, .pw-controls .irs--shiny .irs-max { color: #333; }
+.selectize-dropdown { background: #fff; color: #111; border-radius: 0; }
+.selectize-dropdown .active { background: var(--red) !important; color: #fff !important; }
+.pw-note { font-size: 0.85rem; color: #333; margin-bottom: 10px; max-width: 46ch; }
+
+/* ---------- Hero ---------- */
+.pw-hero { position: relative; padding: 28px 24px 22px; margin-bottom: 18px; background: linear-gradient(100deg, #000 0%, #14171c 60%, rgba(20,23,28,0.6) 100%); border: 1px solid var(--line); box-shadow: 0 3px 0 #000; overflow: hidden; }
+.pw-hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 12px;
+  background: repeating-conic-gradient(#f2f2f2 0 25%, #000 0 50%) 0 0 / 12px 12px; opacity: 0.9; }
+.pw-hero .pw-eyebrow { font-family: var(--font-mono); color: var(--yellow); letter-spacing: 0.18em; font-size: 0.8rem; text-transform: uppercase; }
+.pw-hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4.2rem); font-weight: 900; margin: 6px 0 10px; line-height: 0.95;
+  background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent;
+  text-wrap: balance; filter: drop-shadow(3px 3px 0 #000);
+}
+.pw-hero h1 em { font-style: italic; color: var(--red); -webkit-text-fill-color: var(--red); }
+.pw-hero p { max-width: 70ch; color: #c4c9d0; font-size: 1.05rem; margin-bottom: 18px; }
+.pw-hero p.pw-webnote { font-family: var(--font-mono); font-size: 0.85rem; color: var(--yellow); border-left: 3px solid var(--yellow); padding-left: 10px; }
+.pw-lastrace { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px; font-family: var(--font-mono); background: #000; border: 1px solid #333; padding: 6px 12px; margin-bottom: 8px; }
+.pw-lastrace .flag { width: 22px; height: 14px; background: repeating-conic-gradient(#fff 0 25%, #000 0 50%) 0 0 / 7px 7px; border: 1px solid #555; }
+.pw-lastrace b { color: var(--yellow); font-weight: 400; }
+
+/* ---------- Timing-screen stat tiles ---------- */
+.pw-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: 10px; margin-bottom: 18px; }
+.pw-tile { background: #000; border: 1px solid #2c3036; border-top: 3px solid var(--red); padding: 10px 14px 12px; box-shadow: 0 3px 0 #000; min-width: 0; }
+.pw-tile .val { font-family: var(--font-mono); color: var(--yellow); font-size: 1.9rem; line-height: 1.1; font-variant-numeric: tabular-nums; text-shadow: 0 0 10px rgba(255, 210, 0, 0.25); }
+.pw-tile .lab { font-family: var(--font-display); font-style: italic; font-weight: 700; text-transform: uppercase; font-size: 0.74rem; letter-spacing: 0.08em; color: var(--muted); }
+
+/* ---------- Source cards ---------- */
+.pw-sources { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px; }
+.pw-source { background: var(--panel); border: 1px solid var(--line); box-shadow: 0 3px 0 #000; display: grid; grid-template-rows: auto 1fr auto; min-width: 0; }
+.pw-source-head { display: flex; align-items: center; gap: 10px; background: var(--chrome); color: #111; padding: 6px 12px; font-family: var(--font-display); font-style: italic; font-weight: 900; text-transform: uppercase; letter-spacing: 0.03em; }
+.pw-source-head .num { background: var(--red); color: #fff; padding: 0 8px; transform: skewX(-14deg); font-size: 0.85rem; }
+.pw-source p { margin: 0; padding: 10px 12px; color: #c4c9d0; font-size: 0.95rem; }
+.pw-source .meta { padding: 8px 12px 10px; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.pw-source .meta span b { color: var(--yellow); font-weight: 400; }
+
+.pw-section-title { display: flex; align-items: center; gap: 12px; margin: 26px 0 12px; font-size: 1.25rem; color: #fff; }
+.pw-section-title::before { content: ""; width: 34px; height: 14px; background: var(--red); transform: skewX(-16deg); display: inline-block; }
+
+/* ---------- Tyre legend ---------- */
+.pw-tyres { display: flex; flex-wrap: wrap; gap: 6px 14px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); padding: 4px 4px 0; }
+.pw-tyre { display: inline-flex; align-items: center; gap: 6px; }
+.pw-tyre i { width: 14px; height: 14px; border-radius: 50%; border: 3px solid currentColor; background: #111; display: inline-block; }
+
+/* ---------- Tables ---------- */
+table.dataTable, .dataTables_wrapper { color: var(--text) !important; font-size: 0.92rem; }
+table.dataTable thead th { font-family: var(--font-display); font-style: italic; font-weight: 800; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.06em; color: var(--muted) !important; border-bottom: 2px solid var(--red) !important; background: #000 !important; }
+table.dataTable tbody tr, table.dataTable tbody td { background: transparent !important; color: var(--text) !important; border-color: var(--line) !important; box-shadow: none !important; }
+table.dataTable tbody tr:hover td { background: rgba(255, 210, 0, 0.07) !important; }
+table.dataTable td.pw-pos { font-family: var(--font-mono); color: #000 !important; background: #e9ecef !important; text-align: center; font-weight: 700; width: 34px; }
+table.dataTable td.pw-mono { font-family: var(--font-mono); color: var(--yellow) !important; font-variant-numeric: tabular-nums; }
+.dataTables_wrapper .dataTables_filter input, .dataTables_wrapper .dataTables_length select { background: #000; color: var(--text); border: 1px solid var(--line); border-radius: 0; }
+.dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_paginate { color: var(--muted) !important; font-size: 0.8rem; }
+.page-link { background: #000; border-color: var(--line); color: var(--text); border-radius: 0 !important; }
+.page-item.active .page-link { background: var(--red); border-color: var(--red); }
+
+/* ---------- Team radio ---------- */
+.pw-radio-list { display: grid; gap: 6px; max-height: 420px; overflow-y: auto; padding-right: 4px; }
+.pw-radio { display: grid; grid-template-columns: 70px 54px 1fr; align-items: center; gap: 10px; background: #000; border: 1px solid #22262c; border-left: 4px solid var(--tc, var(--red)); padding: 4px 8px; min-width: 0; }
+.pw-radio .t { font-family: var(--font-mono); color: var(--muted); font-size: 0.8rem; }
+.pw-radio .d { font-family: var(--font-display); font-style: italic; font-weight: 800; color: #fff; }
+.pw-radio audio { width: 100%; height: 30px; min-width: 0; }
+
+/* ---------- Circuit info ---------- */
+.pw-kv { display: grid; grid-template-columns: 120px 1fr; gap: 4px 12px; margin: 0 0 12px; }
+.pw-kv dt { font-family: var(--font-display); font-style: italic; font-weight: 700; text-transform: uppercase; font-size: 0.72rem; color: var(--muted); letter-spacing: 0.06em; padding-top: 3px; }
+.pw-kv dd { margin: 0; font-family: var(--font-mono); color: var(--yellow); }
+.pw-circuit-name { font-size: 1.4rem; color: #fff; margin: 0 0 4px; }
+.leaflet-container { background: #0b0d10 !important; }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: #000; color: var(--text); border-radius: 0; border: 1px solid var(--red); }
+.leaflet-popup-content b { color: var(--yellow); }
+
+/* ---------- Rulebook ---------- */
+.pw-pdf { width: 100%; height: 78vh; border: 1px solid var(--line); background: #222; }
+.pw-doclinks { display: grid; gap: 8px; max-width: 720px; }
+.pw-doclinks p { color: var(--muted); margin: 0 0 4px; }
+.pw-doc { display: block; padding: 10px 14px; background: #000; border: 1px solid var(--line); border-left: 6px solid var(--line);
+  font-family: var(--font-mono); color: var(--text); text-decoration: none; }
+.pw-doc:hover, .pw-doc:focus-visible { border-left-color: var(--red); color: #fff; }
+.pw-doc.active { border-left-color: var(--yellow); color: var(--yellow); }
+.pw-sections { display: grid; gap: 8px; }
+.pw-sec { display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start; }
+.pw-sec .l { background: var(--chrome); color: #111; font-family: var(--font-display); font-style: italic; font-weight: 900; text-align: center; transform: skewX(-12deg); }
+.pw-sec .x b { color: #fff; font-family: var(--font-display); font-style: italic; text-transform: uppercase; font-size: 0.85rem; }
+.pw-sec .x div { color: var(--muted); font-size: 0.9rem; }
+
+.pw-empty { padding: 30px; text-align: center; color: var(--muted); font-family: var(--font-mono); }
+.shiny-output-error-validation { color: var(--yellow); font-family: var(--font-mono); padding: 20px; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
