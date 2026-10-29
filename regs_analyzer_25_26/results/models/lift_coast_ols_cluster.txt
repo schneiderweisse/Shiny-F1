@@ -1,0 +1,41 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           lift_coast_m   R-squared:                       0.476
+Model:                            OLS   Adj. R-squared:                  0.460
+Method:                 Least Squares   F-statistic:                       nan
+Date:                Thu, 29 Oct 2026   Prob (F-statistic):                nan
+Time:                        09:49:25   Log-Likelihood:                -2828.6
+No. Observations:                 570   AIC:                             5693.
+Df Residuals:                     552   BIC:                             5771.
+Df Model:                          17                                         
+Covariance Type:              cluster                                         
+==============================================================================================================
+                                                 coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------
+C(circuit)[austin]:C(stype)[Qualifying]        6.4114      2.207      2.905      0.004       2.086      10.737
+C(circuit)[australia]:C(stype)[Qualifying]     6.9875      1.782      3.921      0.000       3.494      10.480
+C(circuit)[barcelona]:C(stype)[Qualifying]     8.2548      4.543      1.817      0.069      -0.649      17.158
+C(circuit)[hungary]:C(stype)[Qualifying]       7.0643      2.434      2.902      0.004       2.294      11.835
+C(circuit)[monaco]:C(stype)[Qualifying]        3.6017      1.729      2.083      0.037       0.213       6.990
+C(circuit)[monza]:C(stype)[Qualifying]         4.0034      2.021      1.981      0.048       0.043       7.964
+C(circuit)[singapore]:C(stype)[Qualifying]     8.6885      2.355      3.689      0.000       4.072      13.305
+C(circuit)[austin]:C(stype)[Race]             58.0363      8.623      6.730      0.000      41.135      74.937
+C(circuit)[australia]:C(stype)[Race]          16.2500      5.163      3.147      0.002       6.130      26.370
+C(circuit)[barcelona]:C(stype)[Race]          61.7602      8.511      7.256      0.000      45.078      78.442
+C(circuit)[hungary]:C(stype)[Race]            55.2899      8.493      6.510      0.000      38.644      71.935
+C(circuit)[monaco]:C(stype)[Race]             44.4377      9.578      4.639      0.000      25.665      63.211
+C(circuit)[monza]:C(stype)[Race]              54.9115     10.058      5.459      0.000      35.198      74.625
+C(circuit)[singapore]:C(stype)[Race]          94.4675     12.820      7.369      0.000      69.341     119.594
+C(stype)[Qualifying]:y26_pre                 106.8484     25.669      4.163      0.000      56.538     157.159
+C(stype)[Race]:y26_pre                       102.4896     16.597      6.175      0.000      69.959     135.020
+C(stype)[Qualifying]:y26_post                  1.2181      2.311      0.527      0.598      -3.311       5.747
+C(stype)[Race]:y26_post                      -22.0244     11.971     -1.840      0.066     -45.488       1.439
+==============================================================================
+Omnibus:                      140.925   Durbin-Watson:                   2.178
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              529.151
+Skew:                           1.096   Prob(JB):                    1.25e-115
+Kurtosis:                       7.181   Cond. No.                         4.90
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (CRV1)

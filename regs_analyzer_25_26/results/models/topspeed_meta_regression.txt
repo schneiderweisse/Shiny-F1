@@ -1,0 +1,27 @@
+                            WLS Regression Results                            
+==============================================================================
+Dep. Variable:                  delta   R-squared:                       0.011
+Model:                            WLS   Adj. R-squared:                 -0.013
+Method:                 Least Squares   F-statistic:                    0.4547
+Date:                Thu, 29 Oct 2026   Prob (F-statistic):              0.504
+Time:                        09:49:13   Log-Likelihood:                -174.52
+No. Observations:                  44   AIC:                             353.0
+Df Residuals:                      42   BIC:                             356.6
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          7.2620     20.846      0.348      0.729     -34.808      49.332
+v_max_2025    -0.0482      0.071     -0.674      0.504      -0.192       0.096
+==============================================================================
+Omnibus:                        2.452   Durbin-Watson:                   1.155
+Prob(Omnibus):                  0.294   Jarque-Bera (JB):                1.462
+Skew:                          -0.377   Prob(JB):                        0.481
+Kurtosis:                       3.480   Cond. No.                     3.36e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.36e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.

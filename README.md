@@ -4,6 +4,8 @@ A Shiny dashboard for Formula 1 data, styled like 2000s F1 TV graphics. It bring
 
 **Try it in your browser:** https://schneiderweisse.github.io/Shiny-F1/
 
+> **2025 vs 2026 regulations study:** [`regs_analyzer_25_26/`](regs_analyzer_25_26/) has a Python pipeline, statistical analysis and Dash dashboard that measure how the 2026 rules changed lap time, speed, energy use, corners and tyres on seven circuits raced under both rule sets. Start with its [REPORT.md](regs_analyzer_25_26/REPORT.md).
+
 ## What's inside
 
 | Tab | Data | What it shows |

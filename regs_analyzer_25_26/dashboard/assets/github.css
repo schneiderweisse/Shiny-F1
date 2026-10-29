@@ -1,0 +1,115 @@
+/* GitHub-dark look for the 2025 vs 2026 regulations dashboard (colours from GitHub's Primer dark theme). */
+:root {
+  --bg: #0d1117;
+  --bg-inset: #010409;
+  --bg-subtle: #161b22;
+  --border: #30363d;
+  --border-muted: #21262d;
+  --fg: #e6edf3;
+  --fg-muted: #7d8590;
+  --accent: #4493f8;
+  --success: #3fb950;
+  --danger: #f85149;
+  --attention: #d29922;
+  --done: #a371f7;
+  --y2025: #58a6ff;
+  --y2026: #f0883e;
+  --tab-active: #f78166;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { background: var(--bg); color: var(--fg); margin: 0; font-family: var(--font); font-size: 14px; line-height: 1.5; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code, .mono { font-family: var(--mono); font-size: 12px; }
+h1, h2, h3 { font-weight: 600; margin: 0; }
+h2 { font-size: 20px; }
+h3 { font-size: 16px; }
+p { margin: 0 0 8px; }
+
+/* Header: like a repository header */
+.gh-header { background: var(--bg-inset); border-bottom: 1px solid var(--border); padding: 16px max(16px, env(safe-area-inset-left, 0px)) 0; }
+.gh-header-inner { max-width: 1280px; margin: 0 auto; }
+.gh-repo { display: flex; align-items: center; gap: 8px; font-size: 20px; flex-wrap: wrap; }
+.gh-repo .owner { color: var(--accent); font-weight: 400; }
+.gh-repo .sep { color: var(--fg-muted); }
+.gh-repo .name { color: var(--accent); font-weight: 600; }
+.gh-label { display: inline-block; font-size: 12px; font-weight: 500; line-height: 18px; padding: 0 7px; border: 1px solid var(--border); border-radius: 2em; color: var(--fg-muted); }
+.gh-desc { color: var(--fg-muted); margin: 8px 0 12px; max-width: 80ch; }
+
+/* Underline navigation (dcc.Tabs) */
+.gh-tabs { border-bottom: none !important; display: flex !important; flex-wrap: wrap; gap: 0; }
+.gh-tab { background: transparent !important; border: none !important; border-bottom: 2px solid transparent !important;
+          color: var(--fg) !important; padding: 8px 12px !important; font-size: 14px; width: auto !important; flex: 0 0 auto !important; }
+.gh-tab:hover { border-bottom-color: var(--border) !important; }
+.gh-tab--selected { border-bottom-color: var(--tab-active) !important; font-weight: 600; background: transparent !important; color: var(--fg) !important; }
+
+/* Page layout */
+.gh-main { max-width: 1280px; margin: 0 auto; padding: 24px max(16px, env(safe-area-inset-right, 0px)) 48px max(16px, env(safe-area-inset-left, 0px)); display: grid; gap: 16px; }
+.gh-grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 16px; }
+.gh-grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; }
+
+/* Box: GitHub's bordered container */
+.Box { border: 1px solid var(--border); border-radius: 6px; background: var(--bg); min-width: 0; }
+.Box-header { background: var(--bg-subtle); border-bottom: 1px solid var(--border); border-radius: 6px 6px 0 0; padding: 12px 16px;
+              display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.Box-title { font-size: 14px; font-weight: 600; }
+.Box-sub { color: var(--fg-muted); font-size: 12px; }
+.Box-body { padding: 12px 16px; min-width: 0; }
+.Box-body.flush { padding: 4px 4px 0; }
+.Box-footer { border-top: 1px solid var(--border); padding: 8px 16px; color: var(--fg-muted); font-size: 12px; }
+
+/* Key findings */
+.finding { display: grid; gap: 4px; }
+.finding .metric { font-family: var(--mono); font-size: 24px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.finding .ci { font-family: var(--mono); font-size: 12px; color: var(--fg-muted); }
+.finding .what { font-weight: 600; }
+.finding .why { color: var(--fg-muted); font-size: 13px; }
+.up { color: var(--success); }
+.down { color: var(--danger); }
+.flat { color: var(--fg-muted); }
+
+/* Status pills (GitHub "Label") */
+.pill { display: inline-block; font-size: 12px; font-weight: 500; padding: 0 7px; line-height: 18px; border-radius: 2em; border: 1px solid transparent; white-space: nowrap; }
+.pill.sig { color: var(--success); border-color: rgba(63, 185, 80, 0.4); background: rgba(46, 160, 67, 0.15); }
+.pill.ns { color: var(--fg-muted); border-color: var(--border); }
+.pill.warn { color: var(--attention); border-color: rgba(210, 153, 34, 0.4); background: rgba(187, 128, 9, 0.15); }
+.pill.y25 { color: var(--y2025); border-color: rgba(88, 166, 255, 0.4); }
+.pill.y26 { color: var(--y2026); border-color: rgba(240, 136, 62, 0.4); }
+
+/* Tables */
+.gh-table-wrap { overflow-x: auto; }
+table.gh-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+table.gh-table th { text-align: left; font-weight: 600; color: var(--fg-muted); padding: 8px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+table.gh-table td { padding: 8px 12px; border-bottom: 1px solid var(--border-muted); vertical-align: top; }
+table.gh-table tr:last-child td { border-bottom: none; }
+table.gh-table td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+table.gh-table tbody tr:hover { background: var(--bg-subtle); }
+
+/* Controls */
+.gh-controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; }
+.gh-control { display: grid; gap: 4px; min-width: 180px; }
+.gh-control label { font-size: 12px; font-weight: 600; color: var(--fg-muted); }
+.gh-note { color: var(--fg-muted); font-size: 12px; }
+.Select-control, .Select-menu-outer, .Select-option, .Select--single > .Select-control .Select-value,
+.dash-dropdown .Select-control { background: var(--bg-subtle) !important; color: var(--fg) !important; border-color: var(--border) !important; }
+.Select-value-label, .Select-placeholder, .Select-input > input { color: var(--fg) !important; }
+.Select-option.is-focused { background: #1f6feb !important; color: #fff !important; }
+.Select-menu-outer { border-color: var(--border) !important; }
+/* Dash 3+ dropdown */
+.dash-dropdown, .dash-dropdown * { color: var(--fg); }
+.dash-dropdown-trigger, .dash-dropdown-content { background: var(--bg-subtle) !important; border-color: var(--border) !important; }
+.dash-dropdown-option:hover, .dash-dropdown-option[aria-selected="true"] { background: #1f6feb33 !important; }
+.gh-radio label { margin-right: 14px; font-size: 13px; cursor: pointer; }
+.gh-radio input { margin-right: 4px; accent-color: var(--accent); }
+
+.gh-markdown { max-width: 90ch; }
+.gh-markdown p, .gh-markdown li { color: var(--fg); }
+.gh-markdown code { background: rgba(110, 118, 129, 0.4); padding: 0.2em 0.4em; border-radius: 6px; }
+.gh-footer { max-width: 1280px; margin: 0 auto; padding: 16px; color: var(--fg-muted); font-size: 12px; border-top: 1px solid var(--border-muted); }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

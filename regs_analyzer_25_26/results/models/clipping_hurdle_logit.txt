@@ -1,0 +1,28 @@
+                               GEE Regression Results                              
+===================================================================================
+Dep. Variable:                        clip   No. Observations:                84557
+Model:                                 GEE   No. clusters:                       44
+Method:                        Generalized   Min. cluster size:                  24
+                      Estimating Equations   Max. cluster size:                2407
+Family:                           Binomial   Mean cluster size:              1921.8
+Dependence structure:         Exchangeable   Num. iterations:                    17
+Date:                     Thu, 29 Oct 2026   Scale:                           1.000
+Covariance type:                    robust   Time:                         09:49:19
+===========================================================================================
+                              coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+Intercept                 -26.2618      0.810    -32.431      0.000     -27.849     -24.675
+C(circuit)[T.australia]     0.5850      0.175      3.346      0.001       0.242       0.928
+C(circuit)[T.barcelona]    -0.3799      0.167     -2.272      0.023      -0.708      -0.052
+C(circuit)[T.hungary]      -1.0451      0.178     -5.858      0.000      -1.395      -0.695
+C(circuit)[T.monaco]       -1.7961      0.517     -3.471      0.001      -2.810      -0.782
+C(circuit)[T.monza]         0.7004      0.125      5.623      0.000       0.456       0.944
+C(circuit)[T.singapore]    -4.2022      0.546     -7.702      0.000      -5.272      -3.133
+C(stype)[T.Race]            1.3596      0.248      5.472      0.000       0.873       1.847
+y26                         3.8161      0.283     13.495      0.000       3.262       4.370
+y26:C(stype)[T.Race]       -2.7814      0.296     -9.395      0.000      -3.362      -2.201
+np.log(length_m)            3.5349      0.114     30.971      0.000       3.311       3.759
+==============================================================================
+Skew:                          1.2540   Kurtosis:                       5.4917
+Centered skew:                 1.2090   Centered kurtosis:              5.2798
+==============================================================================

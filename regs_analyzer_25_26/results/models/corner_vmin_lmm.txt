@@ -1,0 +1,73 @@
+                   Mixed Linear Model Regression Results
+===========================================================================
+Model:                    MixedLM        Dependent Variable:        v_min  
+No. Observations:         9961           Method:                    REML   
+No. Groups:               21             Scale:                     74.1793
+Min. group size:          298            Log-Likelihood:            inf    
+Max. group size:          653            Converged:                 Yes    
+Mean group size:          474.3                                            
+---------------------------------------------------------------------------
+                                      Coef.  Std.Err. z P>|z| [0.025 0.975]
+---------------------------------------------------------------------------
+C(seg_id)[austin:C1]                 -47.495                               
+C(seg_id)[austin:C2]                  15.870                               
+C(seg_id)[austin:C3]                 -54.957                               
+C(seg_id)[austin:C4]                 -41.672                               
+C(seg_id)[austin:C5]                 -33.418                               
+C(seg_id)[austin:C6]                 -47.353                               
+C(seg_id)[austin:C7]                  75.261                               
+C(seg_id)[austin:C8]                 -29.394                               
+C(seg_id)[australia:C1]               45.991                               
+C(seg_id)[australia:C2]              -31.169                               
+C(seg_id)[australia:C3]               94.764                               
+C(seg_id)[australia:C4]              112.589                               
+C(seg_id)[australia:C5]              -12.842                               
+C(seg_id)[australia:C6]              -37.024                               
+C(seg_id)[barcelona:C1]               21.544                               
+C(seg_id)[barcelona:C2]               21.736                               
+C(seg_id)[barcelona:C3]              -29.255                               
+C(seg_id)[barcelona:C4]               21.932                               
+C(seg_id)[barcelona:C5]              121.925                               
+C(seg_id)[barcelona:C6]              -22.350                               
+C(seg_id)[barcelona:C7]               -9.381                               
+C(seg_id)[barcelona:C8]              132.180                               
+C(seg_id)[hungary:C1]                -39.282                               
+C(seg_id)[hungary:C2]                -10.763                               
+C(seg_id)[hungary:C3]                106.767                               
+C(seg_id)[hungary:C4]                 24.150                               
+C(seg_id)[hungary:C5]                -23.349                               
+C(seg_id)[hungary:C6]                102.622                               
+C(seg_id)[hungary:C7]                -16.699                               
+C(seg_id)[hungary:C8]                -31.842                               
+C(seg_id)[hungary:C9]                  9.474                               
+C(seg_id)[monaco:C1]                 -20.676                               
+C(seg_id)[monaco:C2]                  11.416                               
+C(seg_id)[monaco:C3]                 -55.245                               
+C(seg_id)[monaco:C4]                 -85.103                               
+C(seg_id)[monaco:C5]                 -48.858                               
+C(seg_id)[monaco:C6]                 -65.005                               
+C(seg_id)[monaco:C7]                 -10.680                               
+C(seg_id)[monaco:C8]                 -70.448                               
+C(seg_id)[monaco:C9]                 -49.374                               
+C(seg_id)[monza:C1]                  -59.883                               
+C(seg_id)[monza:C2]                   -7.028                               
+C(seg_id)[monza:C3]                   80.782                               
+C(seg_id)[monza:C4]                   59.774                               
+C(seg_id)[monza:C5]                   61.440                               
+C(seg_id)[monza:C6]                   83.102                               
+C(seg_id)[singapore:C1]                9.478                               
+C(seg_id)[singapore:C10]             -42.936                               
+C(seg_id)[singapore:C11]             -22.809                               
+C(seg_id)[singapore:C2]              -43.953                               
+C(seg_id)[singapore:C3]               20.429                               
+C(seg_id)[singapore:C4]              -12.627                               
+C(seg_id)[singapore:C5]              -53.118                               
+C(seg_id)[singapore:C6]                8.173                               
+C(seg_id)[singapore:C7]               13.909                               
+C(seg_id)[singapore:C8]              -22.786                               
+C(seg_id)[singapore:C9]              -66.533                               
+y26:C(speed_class)[fast (>200)]       -7.610                               
+y26:C(speed_class)[medium (130-200)]  -0.743                               
+y26:C(speed_class)[slow (<130)]        8.353                               
+Group Var                              0.000                               
+===========================================================================

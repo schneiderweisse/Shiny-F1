@@ -1,0 +1,33 @@
+                            WLS Regression Results                            
+==============================================================================
+Dep. Variable:          deg_s_per_lap   R-squared:                       0.791
+Model:                            WLS   Adj. R-squared:                  0.719
+Method:                 Least Squares   F-statistic:                     10.94
+Date:                Thu, 29 Oct 2026   Prob (F-statistic):           8.01e-07
+Time:                        09:49:38   Log-Likelihood:                 92.626
+No. Observations:                  36   AIC:                            -165.3
+Df Residuals:                      26   BIC:                            -149.4
+Df Model:                           9                                         
+Covariance Type:            nonrobust                                         
+===========================================================================================
+                              coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+Intercept                   0.0519      0.009      5.876      0.000       0.034       0.070
+C(circuit)[T.australia]    -0.0289      0.017     -1.744      0.093      -0.063       0.005
+C(circuit)[T.barcelona]     0.0506      0.012      4.296      0.000       0.026       0.075
+C(circuit)[T.hungary]       0.0021      0.010      0.207      0.837      -0.018       0.022
+C(circuit)[T.monaco]       -0.0238      0.012     -1.961      0.061      -0.049       0.001
+C(circuit)[T.monza]        -0.0361      0.009     -3.988      0.000      -0.055      -0.017
+C(circuit)[T.singapore]    -0.0077      0.011     -0.695      0.493      -0.030       0.015
+C(compound)[T.MEDIUM]      -0.0076      0.006     -1.265      0.217      -0.020       0.005
+C(compound)[T.SOFT]        -0.0051      0.009     -0.557      0.583      -0.024       0.014
+C(year)[T.2026]             0.0157      0.006      2.585      0.016       0.003       0.028
+==============================================================================
+Omnibus:                        1.808   Durbin-Watson:                   2.459
+Prob(Omnibus):                  0.405   Jarque-Bera (JB):                0.807
+Skew:                           0.129   Prob(JB):                        0.668
+Kurtosis:                       3.687   Cond. No.                         10.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

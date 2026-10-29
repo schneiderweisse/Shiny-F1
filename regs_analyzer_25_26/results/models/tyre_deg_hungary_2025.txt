@@ -1,0 +1,20 @@
+                  Mixed Linear Model Regression Results
+=========================================================================
+Model:                   MixedLM       Dependent Variable:       lap_time
+No. Observations:        1275          Method:                   REML    
+No. Groups:              20            Scale:                    0.4501  
+Min. group size:         43            Log-Likelihood:           inf     
+Max. group size:         67            Converged:                Yes     
+Mean group size:         63.8                                            
+-------------------------------------------------------------------------
+                              Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-------------------------------------------------------------------------
+C(compound)[HARD]             -0.077                                     
+C(compound)[MEDIUM]            0.039                                     
+C(compound)[SOFT]              0.038                                     
+C(compound)[HARD]:tyre_life    0.047    0.003  17.031 0.000  0.042  0.053
+C(compound)[MEDIUM]:tyre_life  0.049    0.003  14.067 0.000  0.042  0.056
+C(compound)[SOFT]:tyre_life    0.041    0.026   1.584 0.113 -0.010  0.092
+lap                           -0.049    0.001 -35.331 0.000 -0.051 -0.046
+Group Var                      0.000                                     
+=========================================================================

@@ -1,0 +1,48 @@
+                 Generalized Linear Model Regression Results                  
+==============================================================================
+Dep. Variable:              overtakes   No. Observations:                   14
+Model:                            GLM   Df Residuals:                        6
+Model Family:                 Poisson   Df Model:                            7
+Link Function:                    Log   Scale:                          1.0000
+Method:                          IRLS   Log-Likelihood:                -84.010
+Date:                Thu, 29 Oct 2026   Deviance:                       66.546
+Time:                        09:49:38   Pearson chi2:                     66.1
+No. Iterations:                     4   Pseudo R-squ. (CS):             0.9998
+Covariance Type:            nonrobust                                         
+===========================================================================================
+                              coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+Intercept                   5.2345      0.053     98.501      0.000       5.130       5.339
+C(circuit)[T.australia]     0.1485      0.068      2.193      0.028       0.016       0.281
+C(circuit)[T.barcelona]     0.3584      0.065      5.541      0.000       0.232       0.485
+C(circuit)[T.hungary]       0.1962      0.067      2.929      0.003       0.065       0.327
+C(circuit)[T.monaco]       -0.2380      0.075     -3.184      0.001      -0.385      -0.092
+C(circuit)[T.monza]         0.2778      0.066      4.222      0.000       0.149       0.407
+C(circuit)[T.singapore]     0.0243      0.070      0.349      0.727      -0.112       0.161
+C(year)[T.2026]             0.1517      0.035      4.293      0.000       0.082       0.221
+===========================================================================================
+Pearson chi2/df = 11.02
+
+                 Generalized Linear Model Regression Results                  
+==============================================================================
+Dep. Variable:              overtakes   No. Observations:                   14
+Model:                            GLM   Df Residuals:                        6
+Model Family:        NegativeBinomial   Df Model:                            7
+Link Function:                    Log   Scale:                          1.0000
+Method:                          IRLS   Log-Likelihood:                -70.725
+Date:                Thu, 29 Oct 2026   Deviance:                       6.6308
+Time:                        09:49:38   Pearson chi2:                     6.51
+No. Iterations:                     6   Pseudo R-squ. (CS):             0.5367
+Covariance Type:            nonrobust                                         
+===========================================================================================
+                              coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------
+Intercept                   5.2467      0.166     31.522      0.000       4.920       5.573
+C(circuit)[T.australia]     0.1377      0.219      0.627      0.530      -0.292       0.568
+C(circuit)[T.barcelona]     0.3622      0.218      1.658      0.097      -0.066       0.790
+C(circuit)[T.hungary]       0.1975      0.219      0.901      0.367      -0.232       0.627
+C(circuit)[T.monaco]       -0.2237      0.222     -1.010      0.313      -0.658       0.211
+C(circuit)[T.monza]         0.2682      0.219      1.226      0.220      -0.161       0.697
+C(circuit)[T.singapore]     0.0338      0.220      0.153      0.878      -0.397       0.465
+C(year)[T.2026]             0.1267      0.117      1.082      0.279      -0.103       0.356
+===========================================================================================

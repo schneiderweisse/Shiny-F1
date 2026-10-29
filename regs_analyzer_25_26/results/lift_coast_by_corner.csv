@@ -1,0 +1,229 @@
+circuit,segment,label,stype,year,lift_coast_m
+austin,C1,Turn 1,Qualifying,2025,2.5714285714285716
+austin,C1,Turn 1,Qualifying,2026,0.24390243902439024
+austin,C1,Turn 1,Race,2025,14.85373781148429
+austin,C1,Turn 1,Race,2026,7.775489186405768
+austin,C2,"Turn 5, 6, 7, 8, 9",Qualifying,2025,0.14285714285714285
+austin,C2,"Turn 5, 6, 7, 8, 9",Qualifying,2026,5.0
+austin,C2,"Turn 5, 6, 7, 8, 9",Race,2025,4.324324324324325
+austin,C2,"Turn 5, 6, 7, 8, 9",Race,2026,14.779033915724563
+austin,C3,Turn 11,Qualifying,2025,1.0
+austin,C3,Turn 11,Qualifying,2026,0.6097560975609756
+austin,C3,Turn 11,Race,2025,14.0
+austin,C3,Turn 11,Race,2026,5.671794871794872
+austin,C4,Turn 12,Qualifying,2025,1.1428571428571428
+austin,C4,Turn 12,Qualifying,2026,1.0975609756097562
+austin,C4,Turn 12,Race,2025,19.783783783783782
+austin,C4,Turn 12,Race,2026,7.502579979360165
+austin,C5,"Turn 13, 14",Qualifying,2025,1.1764705882352942
+austin,C5,"Turn 13, 14",Qualifying,2026,0.821917808219178
+austin,C5,"Turn 13, 14",Race,2025,7.227979274611399
+austin,C5,"Turn 13, 14",Race,2026,0.7142857142857143
+austin,C6,Turn 15,Qualifying,2025,0.42857142857142855
+austin,C6,Turn 15,Qualifying,2026,0.0
+austin,C6,Turn 15,Race,2025,1.3224043715846994
+austin,C6,Turn 15,Race,2026,0.7120743034055728
+austin,C7,Turn 19,Qualifying,2025,1.0144927536231885
+austin,C7,Turn 19,Qualifying,2026,0.4878048780487805
+austin,C7,Turn 19,Race,2025,1.8675352877307274
+austin,C7,Turn 19,Race,2026,1.0466321243523315
+austin,C8,Turn 20,Qualifying,2025,0.5
+austin,C8,Turn 20,Qualifying,2026,0.32786885245901637
+austin,C8,Turn 20,Race,2025,0.75
+austin,C8,Turn 20,Race,2026,0.6237424547283702
+australia,C1,Turn 1,Qualifying,2025,1.1904761904761905
+australia,C1,Turn 1,Qualifying,2026,18.65979381443299
+australia,C1,Turn 1,Race,2025,1.6666666666666667
+australia,C1,Turn 1,Race,2026,23.69592088998764
+australia,C2,"Turn 3, 4",Qualifying,2025,0.8333333333333334
+australia,C2,"Turn 3, 4",Qualifying,2026,46.224489795918366
+australia,C2,"Turn 3, 4",Race,2025,4.186046511627907
+australia,C2,"Turn 3, 4",Race,2026,26.209876543209877
+australia,C3,Turn 6,Qualifying,2025,1.3095238095238095
+australia,C3,Turn 6,Qualifying,2026,40.0
+australia,C3,Turn 6,Race,2025,1.4705882352941178
+australia,C3,Turn 6,Race,2026,25.418227215980025
+australia,C4,"Turn 9, 10",Qualifying,2025,1.0714285714285714
+australia,C4,"Turn 9, 10",Qualifying,2026,1.6867469879518073
+australia,C4,"Turn 9, 10",Race,2025,2.7906976744186047
+australia,C4,"Turn 9, 10",Race,2026,20.382716049382715
+australia,C5,"Turn 11, 12",Qualifying,2025,1.6666666666666667
+australia,C5,"Turn 11, 12",Qualifying,2026,23.979591836734695
+australia,C5,"Turn 11, 12",Race,2025,4.4186046511627906
+australia,C5,"Turn 11, 12",Race,2026,28.849449204406366
+australia,C6,"Turn 13, 14",Qualifying,2025,1.3253012048192772
+australia,C6,"Turn 13, 14",Qualifying,2026,1.1224489795918366
+australia,C6,"Turn 13, 14",Race,2025,0.7692307692307693
+australia,C6,"Turn 13, 14",Race,2026,2.8677379480840544
+barcelona,C1,"Turn 1, 2, 3",Qualifying,2025,0.6493506493506493
+barcelona,C1,"Turn 1, 2, 3",Qualifying,2026,0.5405405405405406
+barcelona,C1,"Turn 1, 2, 3",Race,2025,25.54192229038855
+barcelona,C1,"Turn 1, 2, 3",Race,2026,14.45320197044335
+barcelona,C2,Turn 4,Qualifying,2025,1.2987012987012987
+barcelona,C2,Turn 4,Qualifying,2026,0.2702702702702703
+barcelona,C2,Turn 4,Race,2025,8.374233128834355
+barcelona,C2,Turn 4,Race,2026,4.284313725490196
+barcelona,C3,C3,Qualifying,2025,0.9090909090909091
+barcelona,C3,C3,Qualifying,2026,3.7096774193548385
+barcelona,C3,C3,Race,2025,3.641404805914972
+barcelona,C3,C3,Race,2026,2.352168199737188
+barcelona,C4,Turn 7,Qualifying,2025,1.8181818181818181
+barcelona,C4,Turn 7,Qualifying,2026,6.25
+barcelona,C4,Turn 7,Race,2025,3.7782340862423
+barcelona,C4,Turn 7,Race,2026,5.562130177514793
+barcelona,C5,Turn 9,Qualifying,2025,0.0
+barcelona,C5,Turn 9,Qualifying,2026,0.0
+barcelona,C5,Turn 9,Race,2025,1.6923076923076923
+barcelona,C5,Turn 9,Race,2026,1.2820512820512822
+barcelona,C6,"Turn 10, 11",Qualifying,2025,1.0389610389610389
+barcelona,C6,"Turn 10, 11",Qualifying,2026,0.13513513513513514
+barcelona,C6,"Turn 10, 11",Race,2025,16.276923076923076
+barcelona,C6,"Turn 10, 11",Race,2026,11.502946954813359
+barcelona,C7,Turn 12,Qualifying,2025,0.45454545454545453
+barcelona,C7,Turn 12,Qualifying,2026,0.0
+barcelona,C7,Turn 12,Race,2025,0.6666666666666666
+barcelona,C7,Turn 12,Race,2026,0.0
+barcelona,C8,Turn 14,Qualifying,2025,0.0
+barcelona,C8,Turn 14,Qualifying,2026,0.0
+barcelona,C8,Turn 14,Race,2025,0.8852459016393442
+barcelona,C8,Turn 14,Race,2026,0.7843137254901961
+hungary,C1,Turn 1,Qualifying,2025,1.2048192771084338
+hungary,C1,Turn 1,Qualifying,2026,2.5925925925925926
+hungary,C1,Turn 1,Race,2025,15.845790715971676
+hungary,C1,Turn 1,Race,2026,9.895833333333334
+hungary,C2,Turn 2,Qualifying,2025,1.4457831325301205
+hungary,C2,Turn 2,Qualifying,2026,1.8518518518518519
+hungary,C2,Turn 2,Race,2025,5.839243498817967
+hungary,C2,Turn 2,Race,2026,5.625
+hungary,C3,Turn 4,Qualifying,2025,0.8641975308641975
+hungary,C3,Turn 4,Qualifying,2026,1.3580246913580247
+hungary,C3,Turn 4,Race,2025,3.428345209817894
+hungary,C3,Turn 4,Race,2026,8.125
+hungary,C4,Turn 5,Qualifying,2025,0.8433734939759037
+hungary,C4,Turn 5,Qualifying,2026,1.3580246913580247
+hungary,C4,Turn 5,Race,2025,3.3702531645569622
+hungary,C4,Turn 5,Race,2026,7.252747252747253
+hungary,C5,"Turn 6, 7, 8, 9",Qualifying,2025,
+hungary,C5,"Turn 6, 7, 8, 9",Qualifying,2026,
+hungary,C5,"Turn 6, 7, 8, 9",Race,2025,0.0
+hungary,C5,"Turn 6, 7, 8, 9",Race,2026,
+hungary,C6,Turn 11,Qualifying,2025,0.21739130434782608
+hungary,C6,Turn 11,Qualifying,2026,0.5063291139240507
+hungary,C6,Turn 11,Race,2025,1.4538676607642125
+hungary,C6,Turn 11,Race,2026,0.7954545454545454
+hungary,C7,"Turn 12, 12A",Qualifying,2025,0.5633802816901409
+hungary,C7,"Turn 12, 12A",Qualifying,2026,1.6455696202531647
+hungary,C7,"Turn 12, 12A",Race,2025,10.29513888888889
+hungary,C7,"Turn 12, 12A",Race,2026,6.451612903225806
+hungary,C8,Turn 13,Qualifying,2025,0.4878048780487805
+hungary,C8,Turn 13,Qualifying,2026,1.2162162162162162
+hungary,C8,Turn 13,Race,2025,8.021778584392015
+hungary,C8,Turn 13,Race,2026,1.3043478260869565
+hungary,C9,Turn 14,Qualifying,2025,0.3614457831325301
+hungary,C9,Turn 14,Qualifying,2026,0.9090909090909091
+hungary,C9,Turn 14,Race,2025,1.794238683127572
+hungary,C9,Turn 14,Race,2026,1.2162162162162162
+monaco,C1,Turn 1,Qualifying,2025,1.1428571428571428
+monaco,C1,Turn 1,Qualifying,2026,0.6185567010309279
+monaco,C1,Turn 1,Race,2025,15.808383233532934
+monaco,C1,Turn 1,Race,2026,5.036968576709796
+monaco,C2,"Turn 3, 4",Qualifying,2025,1.3333333333333333
+monaco,C2,"Turn 3, 4",Qualifying,2026,1.3265306122448979
+monaco,C2,"Turn 3, 4",Race,2025,13.182186234817813
+monaco,C2,"Turn 3, 4",Race,2026,2.311111111111111
+monaco,C3,Turn 5,Qualifying,2025,
+monaco,C3,Turn 5,Qualifying,2026,
+monaco,C3,Turn 5,Race,2025,0.0
+monaco,C3,Turn 5,Race,2026,0.0
+monaco,C4,"Turn 6, 7",Qualifying,2025,0.6666666666666666
+monaco,C4,"Turn 6, 7",Qualifying,2026,0.9302325581395349
+monaco,C4,"Turn 6, 7",Race,2025,3.0212234706616727
+monaco,C4,"Turn 6, 7",Race,2026,0.6102783725910065
+monaco,C5,Turn 8,Qualifying,2025,
+monaco,C5,Turn 8,Qualifying,2026,
+monaco,C5,Turn 8,Race,2025,
+monaco,C5,Turn 8,Race,2026,
+monaco,C6,"Turn 10, 11, 12",Qualifying,2025,1.1428571428571428
+monaco,C6,"Turn 10, 11, 12",Qualifying,2026,0.9183673469387755
+monaco,C6,"Turn 10, 11, 12",Race,2025,21.47487844408428
+monaco,C6,"Turn 10, 11, 12",Race,2026,8.137254901960784
+monaco,C7,"Turn 15, 16, 17",Qualifying,2025,0.5555555555555556
+monaco,C7,"Turn 15, 16, 17",Qualifying,2026,0.0
+monaco,C7,"Turn 15, 16, 17",Race,2025,0.8695652173913043
+monaco,C7,"Turn 15, 16, 17",Race,2026,0.0
+monaco,C8,Turn 18,Qualifying,2025,0.49019607843137253
+monaco,C8,Turn 18,Qualifying,2026,0.38961038961038963
+monaco,C8,Turn 18,Race,2025,1.0666666666666667
+monaco,C8,Turn 18,Race,2026,0.3791469194312796
+monaco,C9,Turn 19,Qualifying,2025,
+monaco,C9,Turn 19,Qualifying,2026,
+monaco,C9,Turn 19,Race,2025,0.0
+monaco,C9,Turn 19,Race,2026,
+monza,C1,"Turn 1, 2",Qualifying,2025,0.6185567010309279
+monza,C1,"Turn 1, 2",Qualifying,2026,0.6410256410256411
+monza,C1,"Turn 1, 2",Race,2025,18.229284903518728
+monza,C1,"Turn 1, 2",Race,2026,14.12742382271468
+monza,C2,"Turn 4, 5",Qualifying,2025,0.6185567010309279
+monza,C2,"Turn 4, 5",Qualifying,2026,0.49382716049382713
+monza,C2,"Turn 4, 5",Race,2025,15.07377979568672
+monza,C2,"Turn 4, 5",Race,2026,12.560646900269541
+monza,C3,Turn 6,Qualifying,2025,0.32967032967032966
+monza,C3,Turn 6,Qualifying,2026,0.6329113924050633
+monza,C3,Turn 6,Race,2025,1.297709923664122
+monza,C3,Turn 6,Race,2026,1.210762331838565
+monza,C4,Turn 7,Qualifying,2025,
+monza,C4,Turn 7,Qualifying,2026,1.25
+monza,C4,Turn 7,Race,2025,2.142857142857143
+monza,C4,Turn 7,Race,2026,3.0
+monza,C5,Turn 8,Qualifying,2025,0.5154639175257731
+monza,C5,Turn 8,Qualifying,2026,1.728395061728395
+monza,C5,Turn 8,Race,2025,10.863636363636363
+monza,C5,Turn 8,Race,2026,7.792732166890983
+monza,C6,C6,Qualifying,2025,1.5463917525773196
+monza,C6,C6,Qualifying,2026,1.0
+monza,C6,C6,Race,2025,7.033218785796105
+monza,C6,C6,Race,2026,3.770718232044199
+singapore,C1,"Turn 1, 2",Qualifying,2025,1.264367816091954
+singapore,C1,"Turn 1, 2",Qualifying,2026,0.8888888888888888
+singapore,C1,"Turn 1, 2",Race,2025,14.60456942003515
+singapore,C1,"Turn 1, 2",Race,2026,9.328922495274101
+singapore,C10,Turn 14,Qualifying,2025,1.4942528735632183
+singapore,C10,Turn 14,Qualifying,2026,0.7777777777777778
+singapore,C10,Turn 14,Race,2025,11.003521126760564
+singapore,C10,Turn 14,Race,2026,8.163653663177925
+singapore,C11,"Turn 16, 17, 18",Qualifying,2025,1.3793103448275863
+singapore,C11,"Turn 16, 17, 18",Qualifying,2026,0.6666666666666666
+singapore,C11,"Turn 16, 17, 18",Race,2025,16.526315789473685
+singapore,C11,"Turn 16, 17, 18",Race,2026,10.767045454545455
+singapore,C2,Turn 3,Qualifying,2025,1.264367816091954
+singapore,C2,Turn 3,Qualifying,2026,0.8888888888888888
+singapore,C2,Turn 3,Race,2025,14.617414248021108
+singapore,C2,Turn 3,Race,2026,9.022770398481974
+singapore,C3,Turn 5,Qualifying,2025,0.7692307692307693
+singapore,C3,Turn 5,Qualifying,2026,0.5063291139240507
+singapore,C3,Turn 5,Race,2025,2.5635593220338984
+singapore,C3,Turn 5,Race,2026,2.2672064777327936
+singapore,C4,Turn 7,Qualifying,2025,2.528735632183908
+singapore,C4,Turn 7,Qualifying,2026,0.4444444444444444
+singapore,C4,Turn 7,Race,2025,20.816505706760317
+singapore,C4,Turn 7,Race,2026,13.364928909952607
+singapore,C5,Turn 8,Qualifying,2025,2.528735632183908
+singapore,C5,Turn 8,Qualifying,2026,0.45977011494252873
+singapore,C5,Turn 8,Race,2025,14.055354993983153
+singapore,C5,Turn 8,Race,2026,6.488651535380507
+singapore,C6,Turn 9,Qualifying,2025,0.5813953488372093
+singapore,C6,Turn 9,Qualifying,2026,0.7777777777777778
+singapore,C6,Turn 9,Race,2025,2.165039929015084
+singapore,C6,Turn 9,Race,2026,1.5171755725190839
+singapore,C7,Turn 10,Qualifying,2025,0.3448275862068966
+singapore,C7,Turn 10,Qualifying,2026,0.5617977528089888
+singapore,C7,Turn 10,Race,2025,6.464912280701754
+singapore,C7,Turn 10,Race,2026,4.806421152030217
+singapore,C8,"Turn 11, 12",Qualifying,2025,0.3448275862068966
+singapore,C8,"Turn 11, 12",Qualifying,2026,0.5617977528089888
+singapore,C8,"Turn 11, 12",Race,2025,6.470588235294118
+singapore,C8,"Turn 11, 12",Race,2026,4.847328244274809
+singapore,C9,Turn 13,Qualifying,2025,0.4
+singapore,C9,Turn 13,Qualifying,2026,2.1052631578947367
+singapore,C9,Turn 13,Race,2025,1.0714285714285714
+singapore,C9,Turn 13,Race,2026,1.0294117647058822

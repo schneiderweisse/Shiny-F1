@@ -1,0 +1,102 @@
+kind,corners,start_m,end_m,length_m,circuit,segment,label
+straight,,0.0,230.0,230.0,australia,S1,S1
+corner,1,230.0,400.0,170.0,australia,C1,Turn 1
+straight,2,400.0,890.0,490.0,australia,S2,S2
+corner,"3, 4",890.0,1270.0,380.0,australia,C2,"Turn 3, 4"
+straight,5,1270.0,1750.0,480.0,australia,S3,S3
+corner,6,1750.0,1900.0,150.0,australia,C3,Turn 6
+straight,"7, 8",1900.0,3210.0,1310.0,australia,S4,S4
+corner,"9, 10",3210.0,3430.0,220.0,australia,C4,"Turn 9, 10"
+straight,,3430.0,4000.0,570.0,australia,S5,S5
+corner,"11, 12",4000.0,4520.0,520.0,australia,C5,"Turn 11, 12"
+corner,"13, 14",4520.0,4800.0,280.0,australia,C6,"Turn 13, 14"
+straight,,4800.0,5280.0,480.0,australia,S6,S6
+corner,1,0.0,240.0,240.0,monaco,C1,Turn 1
+straight,2,240.0,620.0,380.0,monaco,S1,S1
+corner,"3, 4",620.0,1020.0,400.0,monaco,C2,"Turn 3, 4"
+corner,5,1020.0,1180.0,160.0,monaco,C3,Turn 5
+corner,"6, 7",1180.0,1360.0,180.0,monaco,C4,"Turn 6, 7"
+corner,8,1360.0,1450.0,90.0,monaco,C5,Turn 8
+straight,9,1450.0,1970.0,520.0,monaco,S2,S2
+corner,"10, 11, 12",1970.0,2400.0,430.0,monaco,C6,"Turn 10, 11, 12"
+straight,"13, 14",2400.0,2600.0,200.0,monaco,S3,S3
+corner,"15, 16, 17",2600.0,2820.0,220.0,monaco,C7,"Turn 15, 16, 17"
+corner,18,2820.0,2950.0,130.0,monaco,C8,Turn 18
+corner,19,2950.0,3030.0,80.0,monaco,C9,Turn 19
+straight,,3030.0,3340.0,310.0,monaco,S4,S4
+straight,,0.0,700.0,700.0,barcelona,S1,S1
+corner,"1, 2, 3",700.0,1170.0,470.0,barcelona,C1,"Turn 1, 2, 3"
+straight,,1170.0,1580.0,410.0,barcelona,S2,S2
+corner,4,1580.0,1790.0,210.0,barcelona,C2,Turn 4
+straight,,1790.0,2000.0,210.0,barcelona,S3,S3
+corner,,2000.0,2170.0,170.0,barcelona,C3,C3
+straight,"5, 6",2170.0,2440.0,270.0,barcelona,S4,S4
+corner,7,2440.0,2580.0,140.0,barcelona,C4,Turn 7
+straight,8,2580.0,2810.0,230.0,barcelona,S5,S5
+corner,9,2810.0,2920.0,110.0,barcelona,C5,Turn 9
+straight,,2920.0,3340.0,420.0,barcelona,S6,S6
+corner,"10, 11",3340.0,3650.0,310.0,barcelona,C6,"Turn 10, 11"
+corner,12,3650.0,3850.0,200.0,barcelona,C7,Turn 12
+straight,13,3850.0,4240.0,390.0,barcelona,S7,S7
+corner,14,4240.0,4350.0,110.0,barcelona,C8,Turn 14
+straight,,4350.0,4660.0,310.0,barcelona,S8,S8
+straight,,0.0,480.0,480.0,hungary,S1,S1
+corner,1,480.0,690.0,210.0,hungary,C1,Turn 1
+straight,1A,690.0,1000.0,310.0,hungary,S2,S2
+corner,2,1000.0,1220.0,220.0,hungary,C2,Turn 2
+straight,3,1220.0,1730.0,510.0,hungary,S3,S3
+corner,4,1730.0,1930.0,200.0,hungary,C3,Turn 4
+corner,5,1930.0,2280.0,350.0,hungary,C4,Turn 5
+corner,"6, 7, 8, 9",2280.0,2770.0,490.0,hungary,C5,"Turn 6, 7, 8, 9"
+straight,10,2770.0,3020.0,250.0,hungary,S4,S4
+corner,11,3020.0,3140.0,120.0,hungary,C6,Turn 11
+straight,,3140.0,3410.0,270.0,hungary,S5,S5
+corner,"12, 12A",3410.0,3680.0,270.0,hungary,C7,"Turn 12, 12A"
+corner,13,3680.0,3960.0,280.0,hungary,C8,Turn 13
+corner,14,3960.0,4150.0,190.0,hungary,C9,Turn 14
+straight,,4150.0,4390.0,240.0,hungary,S6,S6
+straight,,0.0,780.0,780.0,monza,S1,S1
+corner,"1, 2",780.0,1000.0,220.0,monza,C1,"Turn 1, 2"
+straight,3,1000.0,2000.0,1000.0,monza,S2,S2
+corner,"4, 5",2000.0,2190.0,190.0,monza,C2,"Turn 4, 5"
+straight,,2190.0,2430.0,240.0,monza,S3,S3
+corner,6,2430.0,2560.0,130.0,monza,C3,Turn 6
+straight,,2560.0,2770.0,210.0,monza,S4,S4
+corner,7,2770.0,2890.0,120.0,monza,C4,Turn 7
+straight,,2890.0,3820.0,930.0,monza,S5,S5
+corner,8,3820.0,3970.0,150.0,monza,C5,Turn 8
+straight,"9, 10",3970.0,5030.0,1060.0,monza,S6,S6
+corner,,5030.0,5210.0,180.0,monza,C6,C6
+straight,11,5210.0,5800.0,590.0,monza,S7,S7
+straight,,0.0,290.0,290.0,singapore,S1,S1
+corner,"1, 2",290.0,480.0,190.0,singapore,C1,"Turn 1, 2"
+corner,3,480.0,620.0,140.0,singapore,C2,Turn 3
+straight,4,620.0,850.0,230.0,singapore,S2,S2
+corner,5,850.0,1010.0,160.0,singapore,C3,Turn 5
+straight,6,1010.0,1660.0,650.0,singapore,S3,S3
+corner,7,1660.0,1910.0,250.0,singapore,C4,Turn 7
+corner,8,1910.0,2120.0,210.0,singapore,C5,Turn 8
+corner,9,2120.0,2240.0,120.0,singapore,C6,Turn 9
+straight,,2240.0,2530.0,290.0,singapore,S4,S4
+corner,10,2530.0,2710.0,180.0,singapore,C7,Turn 10
+corner,"11, 12",2710.0,2930.0,220.0,singapore,C8,"Turn 11, 12"
+corner,13,2930.0,3100.0,170.0,singapore,C9,Turn 13
+straight,,3100.0,3450.0,350.0,singapore,S5,S5
+corner,14,3450.0,3640.0,190.0,singapore,C10,Turn 14
+straight,15,3640.0,4190.0,550.0,singapore,S6,S6
+corner,"16, 17, 18",4190.0,4720.0,530.0,singapore,C11,"Turn 16, 17, 18"
+straight,19,4720.0,4930.0,210.0,singapore,S7,S7
+straight,,0.0,520.0,520.0,austin,S1,S1
+corner,1,520.0,720.0,200.0,austin,C1,Turn 1
+straight,"2, 3, 4",720.0,1290.0,570.0,austin,S2,S2
+corner,"5, 6, 7, 8, 9",1290.0,2000.0,710.0,austin,C2,"Turn 5, 6, 7, 8, 9"
+straight,10,2000.0,2450.0,450.0,austin,S3,S3
+corner,11,2450.0,2630.0,180.0,austin,C3,Turn 11
+straight,,2630.0,3630.0,1000.0,austin,S4,S4
+corner,12,3630.0,3900.0,270.0,austin,C4,Turn 12
+corner,"13, 14",3900.0,4160.0,260.0,austin,C5,"Turn 13, 14"
+corner,15,4160.0,4340.0,180.0,austin,C6,Turn 15
+straight,"16, 17, 18",4340.0,4940.0,600.0,austin,S5,S5
+corner,19,4940.0,5220.0,280.0,austin,C7,Turn 19
+corner,20,5220.0,5390.0,170.0,austin,C8,Turn 20
+straight,,5390.0,5520.0,130.0,austin,S6,S6

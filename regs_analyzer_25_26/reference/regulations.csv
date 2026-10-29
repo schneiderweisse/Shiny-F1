@@ -1,0 +1,13 @@
+area,parameter,value_2025,value_2026,ref_2025,ref_2026,expected_effect
+Car,Minimum mass,800 kg without fuel (tyres included),724 kg + nominal tyre mass (726 kg + tyres in qualifying),Technical Art. 4.1,Section C Art. C4.1,Lighter car: better braking and direction change
+Car,Maximum wheelbase,3600 mm,3400 mm,Technical Art. 3.4.2,Section C Art. C2.3.3,Shorter car: more agile in slow corners
+Tyres,Compound range,C1 to C6,C1 to C5 (C6 dropped),Pirelli,Pirelli (24 Nov 2025),Softest compound gone at Monaco and street tracks
+Tyres,Tyre width,Baseline 18-inch tyres,Front about 25 mm and rear about 30 mm narrower; 18-inch rims kept,Pirelli,Pirelli / FIA reporting,Less mechanical grip and contact patch
+Aero,Low-drag mode,DRS rear-wing flap: within 1 s of the car ahead in DRS zones,Active front and rear wings: Corner Mode and Straight Mode for every car on designated straights,Technical Art. 3.10.10,Section C Arts. C3.10.10 and C3.11.6,Straight Mode for everyone: less overtaking help than DRS
+Power unit,Fuel limit,Fuel mass flow ≤ 100 kg/h,Fuel energy flow ≤ 3000 MJ/h (≈70 kg/h of fuel),Technical Art. 5.2.3,Section C Art. C5.2.3,Less combustion-engine power (about 400 kW instead of 550+)
+Power unit,MGU-H,Present (turbo-coupled; up to 125000 rpm),Removed,Technical Art. 5.3.4,Not in Section C,No unlimited harvest from the exhaust: all recharge comes from the MGU-K
+Power unit,MGU-K power,120 kW,350 kW (ERS-K DC power),Technical Art. 5.3.3,Section C Art. C5.2.7,Electric share rises from about 20% to about 50% of peak power
+Power unit,Electrical power vs speed,No speed limit on MGU-K power,P ≤ 1800 − 5·v kW: 350 kW up to 290 km/h; 100 kW at 340 km/h; 0 at 345 km/h,—,Section C Art. C5.2.8(i),Acceleration should fade above ~290 km/h: flatter top-speed profile
+Power unit,Overtake mode,—,P ≤ 7100 − 20·v kW: full power to 337.5 km/h; 0 at 355 km/h,—,Section C Art. C5.2.8(ii),Extra deployment for the chasing car replaces DRS
+Power unit,Energy recharge per lap,MGU-K to battery ≤ 2 MJ per lap; MGU-H unlimited,≤ 8.5 MJ per lap; FIA may lower it to 7 MJ and further in qualifying,Technical Art. 5.3.2 (energy flow diagram),Section C Art. C5.2.10,Energy is scarce: lift-and-coast and clipping on straights
+Power unit,Battery state-of-charge window,4 MJ,4 MJ,Technical Art. 5.3.2 (energy flow diagram),Section C Art. C5.2.9,Same battery window has to feed a 350 kW motor

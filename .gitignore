@@ -17,3 +17,8 @@
 .RData
 .Rproj.user/
 rsconnect/
+
+# regs_analyzer_25_26: Python environment and downloaded data (recreate with its pipeline)
+/regs_analyzer_25_26/.venv/
+/regs_analyzer_25_26/data/
+__pycache__/
