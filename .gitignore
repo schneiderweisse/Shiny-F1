@@ -11,6 +11,10 @@
 /site/
 /dashboard/webdata/
 
+# The regulations study lives on the regs_analyzer_25_26 branch. Its Python environment and
+# downloaded data stay on disk when you switch to main, so keep them out of this branch.
+/regs_analyzer_25_26/
+
 # Local tooling
 /.claude/
 .Rhistory

@@ -4,6 +4,8 @@ A Shiny dashboard for Formula 1 data, styled like 2000s F1 TV graphics. It bring
 
 **Try it in your browser:** https://schneiderweisse.github.io/Shiny-F1/
 
+> **Also in this repository:** the 2025 vs 2026 regulations study (Python, Dash) lives on the [`regs_analyzer_25_26` branch](https://github.com/schneiderweisse/Shiny-F1/tree/regs_analyzer_25_26). Its dashboard is published at https://schneiderweisse.github.io/Shiny-F1/regs/.
+
 ## What's inside
 
 | Tab | Data | What it shows |
@@ -23,7 +25,7 @@ A Shiny dashboard for Formula 1 data, styled like 2000s F1 TV graphics. It bring
 
 The [web edition](https://schneiderweisse.github.io/Shiny-F1/) runs the same app with [Shinylive](https://posit-dev.github.io/r-shinylive/): R runs inside your browser through WebAssembly, so nothing needs installing. The first load downloads R and its packages and takes a minute or so. Race Replay, Timing Screen and Telemetry fetch their data live from the Jolpica, OpenF1 and TracingInsights APIs, so each new selection takes a few seconds.
 
-A GitHub Actions workflow ([.github/workflows/pages.yml](.github/workflows/pages.yml)) rebuilds the site on every push and every Monday, so new races show up on their own.
+A GitHub Actions workflow ([.github/workflows/pages.yml](.github/workflows/pages.yml)) rebuilds the site on every push and every Monday, so new races show up on their own. The same workflow also publishes the regulations study's dashboard from its branch under `/regs/`.
 
 ### On your computer (full data, offline)
 
