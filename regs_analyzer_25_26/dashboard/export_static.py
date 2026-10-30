@@ -28,8 +28,9 @@ import app as live  # noqa: E402  (builds the layout and figures; does not start
 import theme  # noqa: E402
 
 REPO_URL = "https://github.com/schneiderweisse/Shiny-F1"
-SOURCE_URL = f"{REPO_URL}/tree/main/regs_analyzer_25_26"
-REPORT_URL = f"{REPO_URL}/blob/main/regs_analyzer_25_26/REPORT.md"
+BRANCH = "regs_analyzer_25_26"   # this study lives on its own branch; main holds the Shiny app
+SOURCE_URL = f"{REPO_URL}/tree/{BRANCH}"
+REPORT_URL = f"{REPO_URL}/blob/{BRANCH}/regs_analyzer_25_26/REPORT.md"
 
 
 class Page:

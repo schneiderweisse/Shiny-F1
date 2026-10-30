@@ -1,8 +1,8 @@
 """Step 1a: download the raw data for the 7 matched circuits, 2025 and 2026.
 
 TracingInsights telemetry: a sparse partial clone that fetches only the 7 events x 5 sessions
-(Practice 1-3, Qualifying, Race; no sprints, no radio audio). The 2026 full clone made by
-scripts/fetch_data.R is reused when it exists. OpenF1 pit stops, overtakes and race control come
+(Practice 1-3, Qualifying, Race; no sprints, no radio audio). The 2026 full clone made by the
+main branch's scripts/fetch_data.R is reused when it exists next to this folder. OpenF1 pit stops, overtakes and race control come
 from the local OpenF1 folder, or from the API when it is missing.
 
 Run from regs_analyzer_25_26/:  python -m pipeline.fetch

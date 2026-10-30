@@ -1,110 +1,79 @@
-# F1 Data Pit Wall
+# regs_analyzer_25_26: how the 2026 rules changed F1 cars
 
-A Shiny dashboard for Formula 1 data, styled like 2000s F1 TV graphics. It brings together seven open data sources: 77 seasons of results, lap-by-lap race charts, live-timing feeds since 2023, 2026 car telemetry, circuit maps and the FIA rulebook.
+> This branch holds the **2025 vs 2026 regulations study**: a Python data pipeline, statistical analysis and Dash dashboard. The F1 Data Pit Wall Shiny app lives on the [`main` branch](https://github.com/schneiderweisse/Shiny-F1/tree/main).
 
-**Try it in your browser:** https://schneiderweisse.github.io/Shiny-F1/
+The 2026 Formula 1 rules brought a new power unit (no MGU-H; a 350 kW electric motor whose power fades above 290 km/h), active aerodynamics, lighter and shorter cars, and narrower tyres. This study measures what that did on track. It compares the 2025 and 2026 cars on the seven circuits raced under both rule sets (Australia, Monaco, Barcelona, Hungary, Monza, Singapore and Austin), using practice, qualifying and race telemetry.
 
-> **2025 vs 2026 regulations study:** [`regs_analyzer_25_26/`](regs_analyzer_25_26/) has a Python pipeline, statistical analysis and Dash dashboard that measure how the 2026 rules changed lap time, speed, energy use, corners and tyres on seven circuits raced under both rule sets.
-> - Dashboard: https://schneiderweisse.github.io/Shiny-F1/regs/ ([how it works](regs_analyzer_25_26/dashboard/README.md))
-> - Report: [REPORT.md](regs_analyzer_25_26/REPORT.md)
+- **Dashboard (live):** https://schneiderweisse.github.io/Shiny-F1/regs/
+- **Report:** [REPORT.md](regs_analyzer_25_26/REPORT.md): data, methods, results and limitations
+- **How the dashboard works and was built:** [dashboard/README.md](regs_analyzer_25_26/dashboard/README.md)
 
-## What's inside
+## Headline results
 
-| Tab | Data | What it shows |
-|---|---|---|
-| Pit Wall | all | Intro, headline numbers and what each source holds |
-| Hall of Fame | F1DB | The championship battle round by round for any season since 1950, standings, all-time driver leaders |
-| Engine Room | F1DB | Engine layouts on the grid over time, wins by engine maker, the tyre wars, constructor leaders |
-| Race Replay | Jolpica | Lap chart, lap times, pit stops and classification for any race since 1996 |
-| Timing Screen | OpenF1 | Tyre strategy, lap times, running order, result, weather, team radio and race control for any session since 2023 |
-| Telemetry | TracingInsights | Two laps compared over distance (gap, speed, throttle, brake, gear, RPM), a track map coloured by the faster driver in each mini-sector, lap times |
-| Circuits | f1-circuits, TUM, F1DB | World map of circuit outlines with the winners at each circuit, and minimum-curvature racing lines |
-| Rulebook | FIA | The current F1 regulations (sections A to F) and next season's drafts |
+| | 2026 vs 2025 |
+|---|---|
+| Qualifying lap time | +3.97% (95% CI 3.03–4.92) |
+| Top speed | −7.9 km/h on average |
+| Acceleration, ≥ 290 km/h vs below | −0.57 m/s² (rule C5.2.8 power taper) |
+| Straights with clipping (qualifying) | 3.8% → 29.1% |
+| Minimum speed, fast corners | −20.1 km/h |
+| Lift-and-coast in qualifying | +107 m/lap before the Miami change, +1 m/lap after |
 
-## Two ways to run it
+## Run the dashboard
 
-### In the browser (GitHub Pages)
-
-The [web edition](https://schneiderweisse.github.io/Shiny-F1/) runs the same app with [Shinylive](https://posit-dev.github.io/r-shinylive/): R runs inside your browser through WebAssembly, so nothing needs installing. The first load downloads R and its packages and takes a minute or so. Race Replay, Timing Screen and Telemetry fetch their data live from the Jolpica, OpenF1 and TracingInsights APIs, so each new selection takes a few seconds.
-
-A GitHub Actions workflow ([.github/workflows/pages.yml](.github/workflows/pages.yml)) rebuilds the site on every push and every Monday, so new races show up on their own.
-
-### On your computer (full data, offline)
-
-You need R (4.3 or newer) and git.
-
-1. Clone the repo and install the packages:
-
-   ```bash
-   git clone https://github.com/schneiderweisse/Shiny-F1.git
-   cd Shiny-F1
-   Rscript -e "install.packages(c('shiny','bslib','data.table','jsonlite','plotly','leaflet','DT','htmltools','openssl'))"
-   ```
-
-2. Download the data. This creates one folder per source next to `dashboard/`:
-
-   ```bash
-   Rscript scripts/fetch_data.R
-   ```
-
-   | Folder | Source | Size | Time |
-   |---|---|---|---|
-   | `F1DB/` | [F1DB](https://github.com/f1db/f1db) latest release (CSV, JSON, SQLite) | ~200 MB | 10 s |
-   | `Jolpica/` | [Jolpica F1](https://github.com/jolpica/jolpica-f1) database dump (CSV, SQL), topped up with races since the dump | ~110 MB | 1 min |
-   | `OpenF1/meetings/` | [OpenF1](https://openf1.org) every meeting since 2023 (JSON) | ~500 MB | ~1 hour (API limit of 30 requests a minute) |
-   | `TracingInsights_2026/` | [TracingInsights 2026](https://github.com/TracingInsights/2026) per-lap telemetry (git clone) | ~16 GB | 10+ min |
-   | `f1-circuits/` | [bacinger/f1-circuits](https://github.com/bacinger/f1-circuits) (GeoJSON) | 1 MB | seconds |
-   | `TUMFTM_racetrack-database/` | [TUM racetrack database](https://github.com/TUMFTM/racetrack-database) (CSV) | 23 MB | seconds |
-   | `FIA_documents/` | [FIA regulations](https://www.fia.com/regulation/category/110), latest issue of each section (PDF) | ~17 MB | 20 s |
-
-   Pick sources with `--only` or leave some out with `--skip`, for example `Rscript scripts/fetch_data.R --skip=telemetry` to avoid the 16 GB download. Run the script again whenever you want new races: it updates what is there and only fetches what is missing.
-
-3. Start the dashboard:
-
-   ```bash
-   Rscript -e "shiny::runApp('dashboard', launch.browser = TRUE)"
-   ```
-
-   Or open `dashboard/app.R` in RStudio and click **Run App**. To keep the data somewhere else, pass `--dest=PATH` to the fetch script and set the `F1_DATA_ROOT` environment variable to that path.
-
-## Building the web edition yourself
+Everything lives in the [`regs_analyzer_25_26/`](regs_analyzer_25_26/) folder. Its `results/` are committed, so the dashboard runs without downloading any data. You need Python 3.10 or newer.
 
 ```bash
-Rscript scripts/fetch_data.R --only=f1db,jolpica,circuits,tum
-Rscript scripts/build_web.R
-Rscript -e "httpuv::runStaticServer('site')"
+cd regs_analyzer_25_26
+py -3.11 -m venv .venv
+.venv\Scripts\python -m pip install -r requirements.txt
+.venv\Scripts\python dashboard\app.py
 ```
 
-`build_web.R` packs the small tables into `dashboard/webdata/bundle.rds` and exports the app to `site/` with the `shinylive` package. In R, `Sys.setenv(F1_WEB_MODE = "1")` before `runApp` makes the normal app behave like the web edition.
+Then open http://127.0.0.1:8050. On macOS or Linux use `python3 -m venv .venv` and `.venv/bin/python`.
 
-## Repo layout
+- **VS Code:** open the `regs_analyzer_25_26` folder, pick the `.venv` interpreter (**Python: Select Interpreter**), open `dashboard/app.py` and click **Run Python File**.
+- **RStudio:** open [`regs_analyzer_25_26/run_dashboard.R`](regs_analyzer_25_26/run_dashboard.R) and click **Source**. It sets up the Python environment on first use and shows the app in the Viewer pane.
+
+## Rebuild everything from the sources
+
+From `regs_analyzer_25_26/`:
+
+```bash
+.venv\Scripts\python -m pipeline.fetch        # TracingInsights 2025 (sparse clone, ~1.2 GB) and 2026, OpenF1
+.venv\Scripts\python -m pipeline.build_laps
+.venv\Scripts\python -m pipeline.features
+.venv\Scripts\python -m pipeline.stats
+.venv\Scripts\python report\make_figures.py
+```
+
+If the full 2026 telemetry clone made by the `main` branch's `scripts/fetch_data.R` sits next to this folder (`../TracingInsights_2026/2026`), `pipeline.fetch` reuses it. Otherwise it sparse-clones 2026 as well.
+
+## Layout
 
 ```
-dashboard/
-  app.R            UI and server: the eight tabs
-  R/data.R         loads the data (local folders, or bundle + live APIs on the web)
-  R/plots.R        chart styling and builders (telemetry trace, track map, leaderboards)
-  www/pitwall.css  the 2000s TV-graphics theme
-scripts/
-  fetch_data.R     downloads every source into the folder layout above
-  build_web.R      builds the Shinylive site for GitHub Pages
-  sources.R        shared download helpers
-.github/workflows/pages.yml
+regs_analyzer_25_26/
+  config.py              circuits, sessions, paths
+  pipeline/
+    fetch.py             downloads (sparse git clone, OpenF1)
+    build_laps.py        lap table: compounds, teams, PUs, rule regime, lap filters
+    features.py          10 m grids, telemetry quality check, segment maps, features
+    stats.py             all models -> results/ and results/models/
+  reference/             curated tables with sources: compounds, regulations, rule changes, teams
+  results/               model outputs read by the dashboard
+  dashboard/             Dash app (app.py, figures.py, theme.py, assets/github.css)
+                         and export_static.py, the static export for GitHub Pages
+  report/                figure script and figures for REPORT.md
+  run_dashboard.R        starts the dashboard from RStudio
+  data/                  downloaded and intermediate data (not in git)
+.github/workflows/
+  refresh-pages.yml      after a push here, rebuilds the GitHub Pages site on main
 ```
 
-## Data sources and licences
+## How it's published
 
-The data is not stored in this repo; the scripts download it from the sources, each under its own terms.
+GitHub Pages serves the whole repository from `main`. The Pages workflow on `main` builds the Shiny app at the site root, then checks out this branch and runs `dashboard/export_static.py` to put the static version of this dashboard under `/regs/`. A push to this branch triggers that workflow (`refresh-pages.yml`), so the published dashboard follows this branch.
 
-| Source | Licence |
-|---|---|
-| [F1DB](https://github.com/f1db/f1db) | CC BY 4.0 |
-| [Jolpica F1](https://github.com/jolpica/jolpica-f1) | CC BY-NC-SA 4.0 (non-commercial) |
-| [OpenF1](https://openf1.org) | CC BY-NC-SA 4.0 (non-commercial) |
-| [TracingInsights](https://github.com/TracingInsights/2026) | Apache-2.0 |
-| [f1-circuits](https://github.com/bacinger/f1-circuits) | MIT |
-| [TUM racetrack database](https://github.com/TUMFTM/racetrack-database) | LGPL-3.0 |
-| [FIA regulations](https://www.fia.com/regulation/category/110) | © FIA |
-| Map tiles | © Esri |
+## Data sources
 
-This is an unofficial fan project. It is not associated with Formula 1, the FIA or any team. F1, Formula 1 and related marks belong to Formula One Licensing B.V.
+TracingInsights (telemetry, Apache-2.0), OpenF1 (CC BY-NC-SA 4.0), F1DB (CC BY 4.0), Pirelli and F1.com (compound choices), FIA (regulations). This is an unofficial analysis, not associated with Formula 1 or the FIA.

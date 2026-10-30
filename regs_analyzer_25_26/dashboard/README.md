@@ -6,7 +6,7 @@ An interactive dashboard that answers one question: **what did the 2026 Formula 
 
 It is the visual companion to the statistical study in [REPORT.md](../REPORT.md). Every number on it is an estimate with an uncertainty attached, not just an average. The aim is that you can see *where* the rules show up on track and *how sure* we can be about each effect.
 
-This is the second dashboard in the [Shiny-F1](../../README.md) repository. The first, the F1 Data Pit Wall (R/Shiny), is a general explorer of F1 history and data. This one is a focused study, written in Python with Dash.
+This is the second dashboard in the [Shiny-F1](https://github.com/schneiderweisse/Shiny-F1) repository. The first, the F1 Data Pit Wall (R/Shiny) on the `main` branch, is a general explorer of F1 history and data. This one lives on the `regs_analyzer_25_26` branch: a focused study, written in Python with Dash.
 
 ---
 
@@ -73,7 +73,7 @@ GitHub Pages only serves static files, while a Dash app normally needs a Python 
 2. It saves every chart as JSON, one file per tab. For dropdowns, it pre-renders the charts for every option, using the same `DYNAMIC` table as the live callbacks, so the two versions can't drift apart.
 3. It adds ~30 lines of JavaScript to switch tabs (with linkable URLs such as `#speed`) and dropdown options, and copies the `plotly.js` that ships with Python's plotly, so charts render exactly as in the live app.
 
-The export is about 6 MB, of which 4.8 MB is plotly.js. The repository's Pages workflow ([`.github/workflows/pages.yml`](../../.github/workflows/pages.yml)) builds the Shiny app at the site root and this export under **`/regs/`** on every push to `main`.
+The export is about 6 MB, of which 4.8 MB is plotly.js. GitHub Pages publishes from `main`, whose Pages workflow ([`pages.yml` on main](https://github.com/schneiderweisse/Shiny-F1/blob/main/.github/workflows/pages.yml)) builds the Shiny app at the site root. It then checks out this branch and runs the export into **`/regs/`**. A push to this branch triggers that workflow through [`refresh-pages.yml`](../../.github/workflows/refresh-pages.yml), so the published dashboard follows this branch.
 
 ---
 

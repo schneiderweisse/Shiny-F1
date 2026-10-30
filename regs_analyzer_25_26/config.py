@@ -36,8 +36,8 @@ CIRCUITS = {
 }
 
 TI_REPO = "https://github.com/TracingInsights/{year}.git"
-TI_LOCAL_2026 = REPO / "TracingInsights_2026" / "2026"   # full clone made by scripts/fetch_data.R, reused if present
-OPENF1_LOCAL = REPO / "OpenF1" / "meetings"              # made by scripts/fetch_data.R, reused if present
+TI_LOCAL_2026 = REPO / "TracingInsights_2026" / "2026"   # full clone made by main's scripts/fetch_data.R, reused if present
+OPENF1_LOCAL = REPO / "OpenF1" / "meetings"              # made by main's scripts/fetch_data.R, reused if present
 OPENF1_API = "https://api.openf1.org/v1"
 
 GRID_STEP_M = 10.0  # distance grid for telemetry, metres

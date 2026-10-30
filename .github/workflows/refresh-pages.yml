@@ -1,0 +1,21 @@
+# GitHub Pages is published from main. Its workflow builds the Shiny app at the site root and
+# exports this branch's dashboard to /regs/. After a push here, ask main to rebuild so /regs/
+# shows the latest version. (A workflow_dispatch sent with GITHUB_TOKEN starts a new run.)
+name: Refresh GitHub Pages
+
+on:
+  push:
+    branches: [regs_analyzer_25_26]
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Rebuild the Pages site on main
+        run: gh workflow run pages.yml --ref main --repo "$GITHUB_REPOSITORY"
+        env:
+          GH_TOKEN: ${{ github.token }}
