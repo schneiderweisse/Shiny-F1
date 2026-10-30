@@ -389,24 +389,19 @@ def render(tab):
     return PAGES[tab][1]()
 
 
-@app.callback(Output("speed-trace", "figure"), Output("speed-map", "figure"), Output("speed-segments", "figure"), Input("speed-circuit", "value"))
-def speed(c):
-    return F.speed_trace(c), F.track_delta_map(c), F.segment_bars(c)
+# Charts that follow a dropdown: dropdown id -> (graph ids, function returning one figure per graph).
+# The callbacks below and the static GitHub Pages export (export_static.py) both read this table.
+DYNAMIC = {
+    "speed-circuit": (["speed-trace", "speed-map", "speed-segments"],
+                      lambda c: [F.speed_trace(c), F.track_delta_map(c), F.segment_bars(c)]),
+    "accel-circuit": (["accel-curve"], lambda c: [F.accel_curve(c)]),
+    "pu-metric": (["pu-forest"], lambda m: [F.pu_forest(m)]),
+    "corner-circuit": (["corner-dumbbell", "lines-map", "lines-offsets"],
+                       lambda c: [F.corner_dumbbell(c), F.lines_map(c), F.line_offsets(c)]),
+}
 
-
-@app.callback(Output("accel-curve", "figure"), Input("accel-circuit", "value"))
-def accel(c):
-    return F.accel_curve(c)
-
-
-@app.callback(Output("pu-forest", "figure"), Input("pu-metric", "value"))
-def pu(m):
-    return F.pu_forest(m)
-
-
-@app.callback(Output("corner-dumbbell", "figure"), Output("lines-map", "figure"), Output("lines-offsets", "figure"), Input("corner-circuit", "value"))
-def corners(c):
-    return F.corner_dumbbell(c), F.lines_map(c), F.line_offsets(c)
+for _dropdown, (_graphs, _build) in DYNAMIC.items():
+    app.callback([Output(g, "figure") for g in _graphs], Input(_dropdown, "value"))(_build)
 
 
 if __name__ == "__main__":

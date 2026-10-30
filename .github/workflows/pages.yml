@@ -1,4 +1,6 @@
-# Builds the Shinylive (in-browser) edition of the dashboard and publishes it to GitHub Pages.
+# Builds the GitHub Pages site and publishes it:
+#   /        the Shinylive (in-browser) edition of the F1 Data Pit Wall Shiny app
+#   /regs/   a static export of the 2025 vs 2026 regulations dashboard (regs_analyzer_25_26)
 # Runs on every push to main, every Monday (to pick up new races) and on demand.
 name: Deploy dashboard to GitHub Pages
 
@@ -49,6 +51,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: Rscript scripts/build_web.R
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Reads the committed regs_analyzer_25_26/results/; no data download needed
+      - name: Export the regulations dashboard to /regs/
+        run: |
+          python -m pip install --quiet pandas numpy pyarrow plotly dash
+          python regs_analyzer_25_26/dashboard/export_static.py site/regs
 
       - uses: actions/upload-pages-artifact@v3
         with:

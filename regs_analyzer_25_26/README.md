@@ -4,6 +4,8 @@ How the 2026 Formula 1 regulations changed the cars, measured on the seven circu
 
 - **Write-up:** [REPORT.md](REPORT.md): data, methods, results and limitations
 - **Dashboard:** a GitHub-styled dark Dash app with eight tabs (overview, lap time, speed trace, power & energy, corners & lines, tyres & race, regulations, data & methods)
+  - Live: https://schneiderweisse.github.io/Shiny-F1/regs/
+  - What it shows and how it was built: [dashboard/README.md](dashboard/README.md)
 
 ## Headline results
 
@@ -29,6 +31,8 @@ py -3.11 -m venv .venv
 
 Then open http://127.0.0.1:8050. On macOS or Linux use `python3 -m venv .venv` and `.venv/bin/python`.
 
+From RStudio, open [run_dashboard.R](run_dashboard.R) and click **Source**. It sets up the Python environment on first use and shows the app in the Viewer pane.
+
 ## Rebuild everything from the sources
 
 ```bash
@@ -52,8 +56,9 @@ pipeline/
   stats.py             all models -> results/ and results/models/
 reference/             curated tables with sources: compounds, regulations, rule changes, teams
 results/               model outputs read by the dashboard
-dashboard/             Dash app (app.py, figures.py, theme.py, assets/github.css)
+dashboard/             Dash app (app.py, figures.py, theme.py, assets/github.css) and export_static.py for GitHub Pages
 report/                figure script and figures for REPORT.md
+run_dashboard.R        starts the dashboard from RStudio
 data/                  downloaded and intermediate data (not in git)
 ```
 
